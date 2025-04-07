@@ -1,0 +1,6 @@
+PoseidonOne/
+├── lockdown.sh               # Main lockdown script (Shell)
+├── poseidon.html             # Cinematic overlay (HTML/JS)
+├── tts_setup.sh              # TTS engine installer (Shell)
+├── startup.sh                # Boot persistence (Shell)
+└── README.md                 # Setup guide

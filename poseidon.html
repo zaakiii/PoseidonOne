@@ -1,0 +1,17 @@
+<html style="background:black; color:#0F0; font-family:monospace; text-align:center; padding-top:20vh">
+<body>
+  <div style="font-size:15vw">POSEIDON ONE</div>
+  <div style="font-size:8vw">LOCKDOWN ACTIVE</div>
+  <div id="timer" style="font-size:10vw; margin-top:10vh"></div>
+</body>
+<script>
+  let endTime = <%=END_TIME%>;
+  function update() {
+    let remaining = Math.max(0, endTime - Math.floor(Date.now()/1000));
+    document.getElementById("timer").innerHTML = 
+      `${Math.floor(remaining/60)}:${(remaining%60).toString().padStart(2,'0')}`;
+    setTimeout(update, 1000);
+  }
+  update();
+</script>
+</html>
